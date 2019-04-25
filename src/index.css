@@ -1,0 +1,31 @@
+#definitionsBox{
+    border: 3px ridge black;
+}
+#transferButtonDiv{
+    margin-top:1%;
+}
+#proceedModal{
+    visibility: hidden;
+    position: absolute;
+    top:30%;
+    left:30%;
+    padding: 20px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px black;
+    border-radius: 25px;
+    background-color: white;
+    z-index: 9;
+}
+.yesnoBox{
+    margin-left: 40%;
+}
+td:nth-child(4){
+    color: red;
+}
+td:nth-child(3){
+    color: green;
+}
+
+tfoot tr:nth-child(2) th,tfoot tr:nth-child(2) td{
+    background-color: rgba(0, 119, 255, 0.918);
+}

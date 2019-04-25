@@ -1,0 +1,16 @@
+{
+    "fullscreen":false,
+    "BPO":{
+        "domain":"http://192.168.185.78",
+        "port":"8080",
+        "contextroot":"bpo5",
+        "otherNodes":"bpi-endnode|bpi-sampling|bpi-BFC",
+        "pass1":"bpi-encoding",
+        "pass2":"bpi-encodingpass2",
+        "fileCompare":"bpi-fileCompare",
+        "accuracy":"bpi-accuracy",
+        "addressqa":"bpi-addressqa",
+        "getElementsInNode":"domain:port/contextroot/req/nodes/nodeid/elements",
+        "transferElement":"domain:port/contextroot/req/nodes/nodeid/elements/elementid?newNodeId=bpi-encodingpass2"
+    }
+}

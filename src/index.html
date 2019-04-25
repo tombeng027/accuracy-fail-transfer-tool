@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AFT Tool</title>
+        <script src="./assets/lib/jquery.min.js"></script>
+        <link href="./assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div>
+            <div>
+                <div id='sampleDataBox' class='col-md-8'>
+                    <div><span>Total Elements: </span> <span id='totalElements'></span></div> 
+                    <div><span>Sample Size: </span><span id='sampleSize'></span></div>
+                    <div><span>Sample: </span><span id='sample'></span>(Nth element of Sampling Node)</div>
+                </div>
+                <div id='definitionsBox' class='col-md-4'>
+                   <b>Sample</b> : Defined by sampling tool as sample for pass 2.<br>
+                    <b>Not Sample</b> : not for pass 2 / will go directly to address QA.<br>
+                    <b>Undefined</b> : haven't reached sampling / not done with pass 1.<br>
+                </div>
+            </div>
+            <div>
+                <div class='col-md-10'></div>
+                <div id='transferButtonDiv' class='col-md-2'>
+                    <button id='transferButton' class='btn btn-md btn-danger'>Transfer</button>
+                </div>
+                <div id='proceedModal'>Do you wish to proceed with transferring not sample elements
+                    into Pass 2 node? <br> (This should only be done when accuracy fails.) <br>
+                    <div class='yesnoBox'>
+                            <button id='yesButton' class='btn btn-md btn-success'>Yes</button>
+                            <button id='noButton' class='btn btn-md btn-danger'>No</button>
+                    </div>    
+                </div>
+            </div>
+            <div>
+                <div>
+                    <table id='nodeTable' class='table'>
+                        <thead>
+                            <tr>
+                                <th scope='col'>Node Id</th>
+                                <th scope='col'>Sample</th>
+                                <th scope='col'>Not Sample</th>
+                                <th scope='col'>Undefined</th>
+                            </tr>
+                        </thead>
+                        <tbody id='content'>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope='row'>Total</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Overall Total</th>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        require('jquery');
+        require('./app/app.js');
+    </script>
+    <script src="./assets/lib/jquery.min.js"></script>
+    <script src="./assets/lib/bootstrap/js/bootstrap.min.js"></script>
+</html>
